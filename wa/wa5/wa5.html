@@ -1,0 +1,203 @@
+<!--
+Screen Reader Report (before fixes):
+When tested with a screen reader, the page was difficult to navigate.
+The layout relied heavily on non-semantic div and font elements, which
+made page structure unclear. Headings were not announced properly,
+images lacked alternative text, form inputs had no labels, and the
+comments control was not keyboard accessible.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Accessibility assessment</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <header class="header">
+      <h1>Welcome to our wildlife website</h1>
+    </header>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+
+      <form class="search">
+        <label for="search">Search query</label>
+        <input type="search" id="search" name="q">
+        <input type="submit" value="Go!">
+      </form>
+    </nav>
+
+    <main>
+      <article>
+
+        <h2>The trouble with Bears</h2>
+
+        <p>
+          By Evan Wild
+        </p>
+
+        <p>
+          Tall, lumbering, angry, dangerous. The real live bears of this world are proud,
+          independent creatures, self-serving and always on the hunt for food. Nothing like
+          the bears you see on TV, like Baloo from renowned documentary, The Jungle Book.
+        </p>
+
+        <p>
+          So what are bears really like, and why does the world's media portray them with such
+          a skewed vision? In this article we try to answer those questions, and give you a
+          real insight into the life of the bear.
+        </p>
+
+        <h3>Types of bear</h3>
+
+        <p>
+          Bears come in two varieties — large and medium. You don't get small bears. If you
+          have seen a small bear, then it was in fact probably a baby bear (cub) from another
+          species.
+        </p>
+
+        <p>
+          Bears can also be classified in terms of their habitat — both large and medium bears
+          are just as at home in urban areas as they are in the countryside.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Bear Type</th>
+              <th scope="col">Coat</th>
+              <th scope="col">Adult size</th>
+              <th scope="col">Habitat</th>
+              <th scope="col">Lifespan</th>
+              <th scope="col">Diet</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Wild</td>
+              <td>Brown or black</td>
+              <td>1.4 to 2.8 meters</td>
+              <td>Woods and forests</td>
+              <td>25 to 28 years</td>
+              <td>Fish, meat, plants</td>
+            </tr>
+            <tr>
+              <td>Urban</td>
+              <td>North Face</td>
+              <td>18 to 22</td>
+              <td>Condos and coffee shops</td>
+              <td>20 to 32 years</td>
+              <td>Starbucks, sushi</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Habitats and Eating habits</h3>
+
+        <img src="media/wild-bear.jpg" alt="A wild bear standing in a forest habitat">
+
+        <p>
+          Wild bears eat a variety of meat, fish, fruit, nuts, and other naturally growing
+          ingredients.
+        </p>
+
+        <img src="media/urban-bear.jpg" alt="An urban bear near city buildings">
+
+        <p>
+          Urban bears will sleep anywhere they can, from bus shelters and parks, to the toilets
+          in McDonalds, to their own apartment.
+        </p>
+
+        <h3>Mating rituals</h3>
+
+        <p>
+          The following audio clip contains a fact file providing more details about bear
+          mating rituals.
+        </p>
+
+        <audio controls>
+          <source src="media/bear.mp3" type="audio/mp3">
+          <source src="media/bear.ogg" type="audio/ogg">
+          <p>Your browser does not support HTML5 audio.</p>
+        </audio>
+
+        <aside>
+          <h3>About the author</h3>
+
+          <p>
+            Evan Wild is an unemployed plumber from Doncaster, who has been really "in to"
+            wildlife since childhood.
+          </p>
+        </aside>
+
+        <section class="comments">
+          <button class="show-hide">Show comments</button>
+
+          <div class="comment-wrapper">
+
+            <h3>Add comment</h3>
+
+            <form class="comment-form">
+              <div class="flex-pair">
+                <label for="name">Your name:</label>
+                <input type="text" id="name" name="name">
+              </div>
+
+              <div class="flex-pair">
+                <label for="comment">Your comment:</label>
+                <input type="text" id="comment" name="comment">
+              </div>
+
+              <div>
+                <input type="submit" value="Submit comment">
+              </div>
+            </form>
+
+            <h3>Comments</h3>
+
+            <ul class="comment-container">
+              <li>
+                <p>Bob Fossil</p>
+                <p>
+                  Oh I am so glad you taught me all about the big brown angry guys in the woods.
+                </p>
+              </li>
+            </ul>
+
+          </div>
+        </section>
+
+      </article>
+
+      <aside class="secondary">
+        <h2>Related</h2>
+
+        <ul>
+          <li><a href="#">The trouble with Bees</a></li>
+          <li><a href="#">The trouble with Otters</a></li>
+          <li><a href="#">The trouble with Penguins</a></li>
+          <li><a href="#">The trouble with Octopi</a></li>
+          <li><a href="#">The trouble with Lemurs</a></li>
+        </ul>
+      </aside>
+
+    </main>
+
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
