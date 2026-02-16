@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Template</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset and Base Styles */
+        :root {
+            /* Color Palette - 5 Core Colors (WCAG AA Compliant) */
+            --color-primary: #851337;     
+            --color-secondary: #2E7D4F;   /* Accessible green */
+            --color-accent: #8E3A59;      
+            --color-neutral: #2B1E24;     
+            --color-highlight: #F4A6B8;   
+            
+            /* Derived Colors for Flexibility */
+            --color-background: #FFFFFF;
+            --color-text-dark: var(--color-neutral);
+            --color-text-light: white;
+
+            /* Typography */
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Manrope', sans-serif;
+
+            /* Spacing System (8px Base Scale) */
+            --spacing-xs: 0.5rem;   /* 8px */
+            --spacing-sm: 1rem;     /* 16px */
+            --spacing-md: 1.5rem;   /* 24px */
+            --spacing-lg: 2rem;     /* 32px */
+            --spacing-xl: 3rem;     /* 48px */
+
+            /* Border Radius */
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            background-color: var(--color-background);
+            color: var(--color-text-dark);
+            padding: var(--spacing-xl);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        /* Typography Styles (Keeping Your Original Sizes) */
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-secondary);
+        }
+
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-accent);
+        }
+
+        .body-text {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .small-text {
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        /* Color Palette Section */
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .color-swatch {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-text-light);
+        }
+
+        /* Component Styles */
+        .button {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .button:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            transform: scale(0.97);
+        }
+
+        .button:focus,
+        .link:focus,
+        input:focus {
+            outline: 3px solid var(--color-highlight);
+            outline-offset: 2px;
+        }
+
+        /* Links */
+        .link {
+            color: var(--color-primary);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .link:hover {
+            color: var(--color-accent);
+        }
+
+        /* Visited link becomes this AFTER clicking */
+        .link:visited {
+            color: var(--color-secondary);
+        }
+
+        /* Basic Form Input Styling */
+        input {
+            padding: var(--spacing-sm);
+            border: 2px solid var(--color-secondary);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            margin-top: var(--spacing-sm);
+        }
+
+        /* Spacing Demonstration */
+        .spacing-demo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .spacing-block {
+            background-color: var(--color-primary);
+            height: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Design System Template</h1>
+
+        <section>
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-swatch" style="background-color: var(--color-primary);">
+                    <strong>Primary Color</strong>
+                    <p>#B85C7A</p>
+                    <small>Contrast on white: 9.78:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-secondary);">
+                    <strong>Secondary Color</strong>
+                    <p>#2E7D4F</p>
+                    <small>Contrast on white: 5.03:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-accent);">
+                    <strong>Accent Color</strong>
+                    <p>#8E3A59</p>
+                    <small>Contrast on white: 7.23:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-neutral);">
+                    <strong>Neutral Color</strong>
+                    <p>#2B1E24</p>
+                    <small>Contrast on white: 15.98:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-highlight); color: black;">
+                    <strong>Highlight Color</strong>
+                    <p>#F4A6B8</p>
+                    <small>Contrast on black: 10.99:1</small>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <h1>Heading 1 - Cormorant Garamond</h1>
+            <h2>Heading 2 - Cormorant Garamond</h2>
+            <h3>Heading 3 - Cormorant Garamond</h3>
+            <p class="body-text">Body Text - Using Manrope for clean modern readability.</p>
+            <p class="small-text">Small Text - Subtle and understated, perfect for annotations.</p>
+        </section>
+
+        <section>
+            <h2>Spacing System</h2>
+            <div class="spacing-demo">
+                <div class="spacing-block" style="width: var(--spacing-xs)"></div>
+                <div class="spacing-block" style="width: var(--spacing-sm)"></div>
+                <div class="spacing-block" style="width: var(--spacing-md)"></div>
+                <div class="spacing-block" style="width: var(--spacing-lg)"></div>
+                <div class="spacing-block" style="width: var(--spacing-xl)"></div>
+            </div>
+            <p>Spacing values follow an 8px scale: 8, 16, 24, 32, 48px</p>
+        </section>
+
+        <section>
+            <h2>Interactive Components</h2>
+            <a href="https://example.com" class="button">Primary Button</a>
+            <br><br>
+            <a href="https://google.com" class="link">Standard Link</a>
+            <br><br>
+            <a href="https://wikipedia.org" class="link">Visited Link Example</a>
+            <br><br>
+            <label for="email">Email Input</label><br>
+            <input type="email" id="email" placeholder="Enter your email">
+        </section>
+    </div>
+</body>
+</html>
