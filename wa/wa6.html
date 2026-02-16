@@ -153,12 +153,14 @@
         }
 
         .link:hover {
-            color: var(--color-accent);
+            color: var(--color-highlight);
         }
 
-        /* Visited link becomes this AFTER clicking */
-        .link:visited {
+
+        .link-visited-demo {
             color: var(--color-secondary);
+            text-decoration: underline;
+            font-weight: 500;
         }
 
         /* Basic Form Input Styling */
@@ -248,7 +250,7 @@
             <br><br>
             <a href="https://google.com" class="link">Standard Link</a>
             <br><br>
-            <a href="https://wikipedia.org" class="link">Visited Link Example</a>
+            <a href="https://wikipedia.org" class="link-visited-demo">Visited Link Example</a>
             <br><br>
             <label for="email">Email Input</label><br>
             <input type="email" id="email" placeholder="Enter your email">
