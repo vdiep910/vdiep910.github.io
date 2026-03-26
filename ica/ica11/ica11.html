@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ica11</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <div>
+      <label for="custom-name">Enter custom name:</label>
+      <input id="custom-name" type="text" placeholder="Enter a name" />
+    </div>
+
+    <fieldset>
+      <legend>Choose locale:</legend>
+
+      <label for="us">US</label>
+      <input id="us" type="radio" name="uk-us" value="us" checked />
+
+      <label for="uk">UK</label>
+      <input id="uk" type="radio" name="uk-us" value="uk" />
+    </fieldset>
+
+    <div>
+      <button class="generate">Generate random story</button>
+    </div>
+
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
+
+    <script src="ica11.js"></script>
+
+  </body>
+</html>
