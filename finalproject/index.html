@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volume Control</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h2>Volume Control</h2>
+    <p class="subtitle">Set power, set angle, and launch.</p>
+
+    <div id="scene">
+      <div id="result-pct"></div>
+      <div id="meter-label">POWER</div>
+      <div id="meter-outer"><div id="meter-fill"></div></div>
+
+      <div id="ball-group">
+        <div id="ball"></div>
+        <div id="arrow-wrap">
+          <div id="arrow-line">
+            <div id="arrow-head"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="vol-row">
+        <svg class="vol-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="3,8 3,16 7,16 13,21 13,3 7,8" fill="currentColor"/>
+          <path d="M16 9.5 Q18.5 12 16 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        </svg>
+
+        <div id="vol-bar-wrap">
+          <div id="vol-bar"><div id="vol-fill"></div></div>
+          <div id="vol-labels">
+            <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
+          </div>
+        </div>
+
+
+        <svg class="vol-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="3,8 3,16 7,16 13,21 13,3 7,8" fill="currentColor"/>
+          <path d="M16 9.5 Q18.5 12 16 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M17.5 7 Q21.5 12 17.5 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M19.5 5 Q24.5 12 19.5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="btn-row" id="action-row"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
