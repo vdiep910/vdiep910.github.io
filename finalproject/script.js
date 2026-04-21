@@ -52,7 +52,7 @@ function startPower() {
 }
 
 function animateMeter() {
-  meterVal += meterDir * 2;
+  meterVal += meterDir * 4;
   if (meterVal >= 100) { meterVal = 100; meterDir = -1; }
   if (meterVal <= 0)   { meterVal = 0;   meterDir =  1; }
   const h = document.getElementById('meter-outer').offsetHeight;
@@ -79,7 +79,7 @@ function startAngle() {
 }
 
 function animateAngle() {
-  angleVal += angleDirUp * 2.5;
+  angleVal += angleDirUp * 4;
   if (angleVal >  45) { angleVal =  45; angleDirUp = -1; }
   if (angleVal < -25) { angleVal = -25; angleDirUp =  1; }
   arrowLine.style.transform = `rotate(${-angleVal}deg)`;
